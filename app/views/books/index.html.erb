@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <h1 class="display-4">部活の本を管理しよう。</h1>
+  <p class="lead"><span class="font-weight-bold">Book on Rails</span> では、部活の本の登録、更新、削除、表示ができます。このウェブアプリはRuby on Railsで構築されています。</p>
+  <hr class="my-4">
+  <%= link_to "新しく本を登録する", new_book_path, class:"btn btn-primary btn-lg", role:"button" %>
+</div>
+
+<% @books.each do |book| %>
+  <% book_information = GoogleBooks.search(book.isbn).first %>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <%= image_tag book_information.image_link, class:"bd-placeholder-img", width:"100%", height:"auto" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= book_information.title %></h5>
+              <p class="card-text">
+                <% if Time.now - book.created_at <= 172800 %><span class="badge badge-primary">新入荷</span>
+                <% end %>
+                <%= book_information.description.truncate(150, omission: '...') %>
+              </p>
+              <p class="card-text"><small class="text-muted">Last updated <%= Time.now - book.created_at %> s ago</small></p>
+            </div>
+          </div>
+        </div>
+          <%= link_to '詳細を見る', book, class:"card-footer text-center bg-primary text-white"%>
+      </div>
+<% end %>
+
+<hr>
+
+<footer class="text-muted" style="margin: 0 0 75px 0" >
+  <div class="container text-center">
+    <small class="font-bold">Denshi-Tsushinbu, Ibaraki Prefectural Tsuchiura First High School</small>
+  </div>
+</footer>

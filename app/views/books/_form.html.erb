@@ -1,0 +1,25 @@
+<%= form_with(model: book, local: true) do |form| %>
+  <% if book.errors.any? %>
+    <div class="alert alert-danger mt-3" role="alert">
+      <h4>以下の理由により登録できません</h4>
+      <hr>
+
+      <ul>
+        <% book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field input-group mb-4 mt-4">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">ISBN</span>
+    </div>
+    <%= form.number_field :isbn, class: "form-control", :required => 'true'  %>
+  </div>
+
+  <div class="actions input-group">
+    <%= form.submit class:"btn btn-primary btn-lg btn-block" %>
+  </div>
+<% end %>

@@ -1,0 +1,55 @@
+<% if notice.present? %>
+  <p class="alert alert-primary" role="alert"><%= notice %></p>
+<% end %>
+
+<div class="text-center">
+  <%= image_tag @book_information.image_link, class:"img-thumbnail mb-5 shadow"%>
+</div>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">書名</th>
+      <td><h4><%= @book_information.title %></h4></td>
+    </tr>
+    <tr>
+      <th scope="row">著者</th>
+      <td><%= @book_information.authors %></td>
+    </tr>
+    <tr>
+      <th scope="row">説明</th>
+      <td><%= @book_information.description %></td>
+    </tr>
+    <tr>
+      <th scope="row">出版社</th>
+      <td><%= @book_information.publisher %></td>
+    </tr>
+    <tr>
+      <th scope="row">ISBN</th>
+      <td><%= @book_information.isbn %></td>
+    </tr>
+    <tr>
+      <th scope="row">頁数</th>
+      <td><%= @book_information.page_count %></td>
+    </tr>
+    <tr>
+      <th scope="row">分類</th>
+      <td><%= @book_information.categories %></td>
+    </tr>
+    <tr>
+      <th scope="row">言語</th>
+      <td><%= @book_information.language %></td>
+    </tr>
+    <tr>
+      <th scope="row">評価</th>
+      <td><%= @book_information.ratings_count %></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="index-button form-group">
+  <div class="row">
+    <div class="button col"><%= link_to '編集する', edit_book_path(@book), class: "btn btn-secondary btn-lg btn-block" %></div>
+    <div class="button col"><%= link_to '削除する', @book, method: :delete, data: { confirm: '本当によろしいですか。' }, class: "btn btn-danger btn-lg btn-block"%></div>
+  </div>
+</div>
