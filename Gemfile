@@ -61,5 +61,8 @@ gem 'bootstrap'
 gem 'popper_js'
 gem 'jquery-rails'
 
-#Google books API
+# Google books API
 gem 'googlebooks'
+
+# Index Search
+gem 'ransack'

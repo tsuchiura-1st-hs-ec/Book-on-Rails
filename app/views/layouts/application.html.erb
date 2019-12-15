@@ -7,14 +7,30 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg  navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="/">Book on Rails</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <a class="navbar-brand" href="/">Book on Rails</a>
+          </ul>
+          <!-- Search books -->
+          <div class="form-inline my-2 my-lg-0">
+            <%= search_form_for @q do |f| %>
+              <%= f.search_field :isbn_or_title_cont, class:"form-control mr-sm-2" %>
+              <%= f.submit ("検索"), class:"btn btn-outline-light my-2 my-sm-0" %>
+            <% end %>
+          </div>
+          <!-- Search books -->
+        </div>
       </nav>
       <div class="container mt-5 pt-5">
         <%= yield %>

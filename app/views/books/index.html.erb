@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p class="alert alert-primary" role="alert"><%= notice %></p>
+<% end %>
 
 <div class="jumbotron" style="margin-top: -35px">
   <h1 class="display-4">部活の本を管理しよう。</h1>
@@ -7,7 +9,11 @@
   <%= link_to "新しく本を登録する", new_book_path, class:"btn btn-primary btn-lg", role:"button" %>
 </div>
 
-<% @books.each do |book| %>
+<% if @searched_books.count == 0 %>
+  お探しの本はありません。部費で購入してね☺️
+<% end %>
+
+<% @searched_books.each do |book| %>
   <% book_information = GoogleBooks.search(book.isbn).first %>
       <div class="card mb-3">
         <div class="row no-gutters">
