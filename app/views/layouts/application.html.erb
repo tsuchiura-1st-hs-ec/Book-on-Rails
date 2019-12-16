@@ -21,6 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <a class="navbar-brand" href="/">Book on Rails</a>
+            <li class="nav-item active">
+              <%= link_to 'エクスポート', books_path(format: :csv), class: "nav-link"%>
+
+            </li>
           </ul>
           <!-- Search books -->
           <div class="form-inline my-2 my-lg-0">

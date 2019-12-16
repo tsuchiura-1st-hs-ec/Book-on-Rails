@@ -7,6 +7,11 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all.order(id: "DESC")
+
+    respond_to do |format|
+      format.html
+      format.csv {send_data @books.generate_csv, filename: "book_on_rails-#{Time.zone.now.strftime('%Y%m%d%S')}.csv"}
+    end
   end
 
   # GET /books/1
