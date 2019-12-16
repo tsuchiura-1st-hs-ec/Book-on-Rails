@@ -30,7 +30,7 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       if @book.save
-        BookMailer.creation_email(@book).deliver_now
+        # BookMailer.creation_email(@book).deliver_now
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
       else
@@ -84,7 +84,7 @@ class BooksController < ApplicationController
 
     def search_books
       @q = Book.ransack(params[:q])
-      @searched_books = @q.result(distinct: true)
+      @searched_books = @q.result
     end
 
     def add_title_to_book
