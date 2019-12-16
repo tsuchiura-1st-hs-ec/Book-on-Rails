@@ -1,3 +1,17 @@
 <h1>本を登録する</h1>
 
+<!-- ISBN registration -->
 <%= render 'form', book: @book %>
+
+<hr>
+<p>多数の本を登録する場合はCSVをお使いください。</p>
+
+<!-- CSV file registration -->
+<%= form_tag import_books_path, multiple: true do %>
+  <div class="custom-file form-group mb-3">
+    <%= file_field_tag :file, class: "custom-file-input", :required => 'true', :disabled => "true" %>
+    <label class="custom-file-label" for="customFile">CSV File</label>
+  </div>
+
+  <%= submit_tag "CSVで登録", class: "btn btn-primary btn-lg btn-block form-group", :disabled => "true"  %>
+<% end %>
