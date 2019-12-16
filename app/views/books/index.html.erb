@@ -10,7 +10,9 @@
 </div>
 
 <% if @searched_books.count == 0 %>
-  お探しの本はありません。部費で購入してね☺️
+  <div class="alert alert-info" role="alert">
+    お探しの本はありません。部費で購入してね&#x1f970;
+  </div>
 <% end %>
 
 <% @searched_books.each do |book| %>
