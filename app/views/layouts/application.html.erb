@@ -25,7 +25,7 @@
           <!-- Search books -->
           <div class="form-inline my-2 my-lg-0">
             <%= search_form_for @q do |f| %>
-              <%= f.search_field :isbn_or_title_cont, class:"form-control mr-sm-2" %>
+              <%= f.search_field :title_cont, class:"form-control mr-sm-2" %>
               <%= f.submit ("検索"), class:"btn btn-outline-light my-2 my-sm-0" %>
             <% end %>
           </div>
