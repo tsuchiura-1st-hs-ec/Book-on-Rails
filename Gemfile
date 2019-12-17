@@ -72,3 +72,5 @@ gem 'kaminari'
 
 # Internationaization
 gem 'rails-i18n'
+
+gem 'coffee-rails'
