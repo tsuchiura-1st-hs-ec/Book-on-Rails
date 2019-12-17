@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all.order(id: "DESC")
+    # @books = Book.all.order(id: "DESC")
 
     respond_to do |format|
       format.html
@@ -94,7 +94,7 @@ class BooksController < ApplicationController
 
     def search_books
       @q = Book.ransack(params[:q])
-      @searched_books = @q.result
+      @searched_books = @q.result.page(params[:page]).per(10)
     end
 
     def add_title_to_book

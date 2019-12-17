@@ -38,6 +38,11 @@
       </div>
 <% end %>
 
+<div class="mt-4 mb-4">
+  <%= paginate @searched_books %>
+  <%= page_entries_info @searched_books %>
+</div>
+
 <hr>
 
 <footer class="text-muted" style="margin: 0 0 75px 0" >

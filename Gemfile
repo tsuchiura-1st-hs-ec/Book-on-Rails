@@ -66,3 +66,9 @@ gem 'googlebooks'
 
 # Index Search
 gem 'ransack'
+
+# Pagination
+gem 'kaminari'
+
+# Internationaization
+gem 'rails-i18n'
