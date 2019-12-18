@@ -73,4 +73,5 @@ gem 'kaminari'
 # Internationaization
 gem 'rails-i18n'
 
-gem 'coffee-rails'
+# Barcode scanning
+# gem "zbar"

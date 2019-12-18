@@ -3,6 +3,8 @@ class BooksController < ApplicationController
   before_action :get_details, only: [:show]
   before_action :search_books
 
+  # require 'zbar'
+
   # GET /books
   # GET /books.json
   def index
@@ -101,4 +103,9 @@ class BooksController < ApplicationController
       @book.title = GoogleBooks.search(@book.isbn).first.title
       @book.save
     end
+
+    # def image_to_isbn
+    #   @image = params(:image)
+    #   ZBar::Image.from_jpeg(File.binread(@image)).process.data
+    # end
 end
