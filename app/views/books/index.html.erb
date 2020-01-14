@@ -28,7 +28,9 @@
               <p class="card-text">
                 <% if Time.now - book.created_at <= 172800 %><span class="badge badge-primary">新入荷</span>
                 <% end %>
-                <%= book_information.description.truncate(150, omission: '...') %>
+                <% if book_information.description %>
+                  <%= book_information.description.truncate(150, omission: '...') %>
+                <% end %>
               </p>
               <p class="card-text"><small class="text-muted">Last updated <%= Time.now - book.created_at %> s ago</small></p>
             </div>
