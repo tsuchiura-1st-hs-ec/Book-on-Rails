@@ -20,7 +20,9 @@
       <div class="card mb-3">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <% if !book_information.image_link.nil? %>
+            <% if book_information.image_link.nil? %>
+              画像はないよ！
+            <% else %>
               <%= image_tag book_information.image_link, class:"bd-placeholder-img", width:"100%", height:"auto" %>
             <% end %>
           </div>
