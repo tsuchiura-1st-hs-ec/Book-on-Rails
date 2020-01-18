@@ -101,7 +101,9 @@ class BooksController < ApplicationController
 
     def add_title_to_book
       @book.title = GoogleBooks.search(@book.isbn).first.title
-      @book.save
+      if @book.title
+        @book.save
+      end
     end
 
     # def image_to_isbn
