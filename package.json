@@ -6,7 +6,8 @@
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "4.2.2",
-    "minimist": "^1.2.2",
+    "kind-of": "^6.0.3",
+    "minimist": "^1.2.5",
     "serialize-javascript": "^2.1.1",
     "turbolinks": "^5.2.0"
   },
