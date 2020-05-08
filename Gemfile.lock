@@ -37,6 +37,17 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activeadmin (2.7.0)
+      arbre (~> 1.2, >= 1.2.1)
+      formtastic (~> 3.1)
+      formtastic_i18n (~> 0.4)
+      inherited_resources (~> 1.7)
+      jquery-rails (~> 4.2)
+      kaminari (~> 1.0, >= 1.0.1)
+      railties (>= 5.2, < 6.1)
+      ransack (~> 2.1, >= 2.1.1)
+      sassc-rails (~> 2.1)
+      sprockets (>= 3.0, < 4.1)
     activejob (6.0.2.2)
       activesupport (= 6.0.2.2)
       globalid (>= 0.3.6)
@@ -58,6 +69,8 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    arbre (1.2.1)
+      activesupport (>= 3.0.0)
     autoprefixer-rails (9.7.5)
       execjs
     bindex (0.8.1)
@@ -83,15 +96,26 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
+    formtastic (3.1.5)
+      actionpack (>= 3.2.13)
+    formtastic_i18n (0.6.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     googlebooks (0.0.9)
       httparty
+    has_scope (0.7.2)
+      actionpack (>= 4.1)
+      activesupport (>= 4.1)
     httparty (0.18.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
+    inherited_resources (1.11.0)
+      actionpack (>= 5.0, < 6.1)
+      has_scope (~> 0.6)
+      railties (>= 5.0, < 6.1)
+      responders (>= 2, < 4)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     jquery-rails (4.3.5)
@@ -185,6 +209,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
+    responders (3.0.0)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     ruby_dep (1.5.0)
     rubyzip (2.3.0)
     sass (3.7.4)
@@ -253,6 +280,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeadmin
   bootsnap (>= 1.4.2)
   bootstrap
   byebug
@@ -274,7 +302,6 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
-  tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
