@@ -1,10 +1,14 @@
-<h1>本を登録する</h1>
+<h1>
+  本を登録する
+</h1>
 
 <!-- ISBN registration -->
 <%= render 'form', book: @book %>
 
 <hr>
-<p>多数の本を登録する場合はCSVをお使いください。</p>
+<p>
+  多数の本を登録する場合はCSVをお使いください。
+</p>
 
 <!-- CSV file registration -->
 <%= form_tag import_books_path, multiple: true do %>
