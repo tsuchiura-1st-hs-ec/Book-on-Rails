@@ -17,12 +17,12 @@
       <span class="input-group-text" id="inputGroup-sizing-default">ISBN</span>
     </div>
     <div class="custom-file">
-      <%= form.number_field :isbn, class: "form-control", :required => 'true' %>
+      <%= form.number_field :isbn, class: "form-control", id: 'isbn-input', :required => 'true' %>
     </div>
   </div>
 
   <div class="actions input-group">
-    <%= form.submit ("ISBNで登録する"), class:"btn btn-primary btn-lg btn-block" %>
+    <%= form.submit ("ISBNで登録する"), class:"btn btn-primary btn-lg btn-block", id: 'isbn-submit' %>
   </div>
 
 <% end %>
