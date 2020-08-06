@@ -1,0 +1,5 @@
+labels:
+  - auto_merge_force
+  - [auto_merge, minor]
+
+delete_branch: delete
