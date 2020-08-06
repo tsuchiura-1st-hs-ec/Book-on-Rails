@@ -71,7 +71,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     arbre (1.2.1)
       activesupport (>= 3.0.0)
-    autoprefixer-rails (9.7.6)
+    autoprefixer-rails (9.8.6.1)
       execjs
     bindex (0.8.1)
     bootsnap (1.4.6)
