@@ -1,3 +1,4 @@
+![Dependabot](https://github.com/tsuchiura-1st-hs-ec/Book-on-Rails/workflows/Dependabot/badge.svg)
 # Book on Rails
 
 This README would normally document whatever steps are necessary to get the
