@@ -5,7 +5,7 @@
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "4.2.2",
+    "@rails/webpacker": "5.1.1",
     "bootstrap": "^4.4.1",
     "jpeg-js": "^0.4.1",
     "jquery": "^3.5.1",
@@ -22,6 +22,6 @@
     "rails-erb-loader": "^5.5.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3.11.2"
   }
 }
