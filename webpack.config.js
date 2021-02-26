@@ -1,7 +1,6 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
     entry: './src/job.js.erb',
     loader: 'babel-loader',
     output: {
